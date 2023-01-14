@@ -26,6 +26,7 @@ body {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
+  padding: 0 25px;
 }
 
 /* ---------------------------
@@ -47,6 +48,9 @@ body {
   line-height: 36px;
   color: var(--text-color);
 }
+.mobile-menu {
+  display: none;
+}
 .navbar,
 .menu ul {
   display: flex;
@@ -63,11 +67,14 @@ body {
   line-height: 24px;
   color: var(--text-color);
 }
-.cart img {
+.cart-desktop img,
+.cart-mobile img {
   width: 36px;
   height: 36px;
 }
-
+.cart-mobile {
+  display: none;
+}
 /* ---------------------------
         header end
 ------------------------------*/
@@ -107,13 +114,68 @@ body {
   cursor: pointer;
 }
 .btn-primary i {
-    margin-left: 8px;
+  margin-left: 8px;
 }
 .hero-img {
-    background: url("../images/Circle\ design.svg") no-repeat center;
-    padding: 40px 20px;
-    object-fit: cover;
+  background: url("../images/Circle\ design.svg") no-repeat center;
+  padding: 40px 20px;
+  object-fit: cover;
 }
+
 /* ---------------------------
         hero section end
 ------------------------------*/
+
+/* responsive area  */
+/* for mobile */
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 20px;
+  }
+  /* menu */
+  .header-container {
+    padding-top: 35px;
+    padding-bottom: 22px;
+  }
+  .cart-desktop,
+  .menu {
+    display: none;
+  }
+  .cart-mobile {
+    display: block;
+    order: 2;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .navbar,
+  .menu ul {
+    gap: 12px;
+  }
+  .logo {
+    order: 1;
+  }
+
+  /* hero */
+  .hero-container {
+    gap: 1px !important;
+    flex-direction: column-reverse;
+    margin-top: -45px;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .hero-description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .hero-img {
+    transform: scale(0.8);
+  }
+}
