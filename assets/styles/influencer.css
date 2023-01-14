@@ -2,6 +2,11 @@
   --primary-color: #e02c6d;
   --text-color: #3a3a3a;
   --white: #ffffff;
+  --gray-color: #18191f;
+  --dark-color: rgba(0, 0, 0, 0.87);
+  --orange-color: #fb8200;
+  --gray-color2: #5e6366;
+  --gray-color3: #787885;
 }
 
 /* ---------------------------
@@ -67,6 +72,9 @@ body {
   line-height: 24px;
   color: var(--text-color);
 }
+.icon {
+  display: none;
+}
 .cart-desktop img,
 .cart-mobile img {
   width: 36px;
@@ -126,6 +134,99 @@ body {
         hero section end
 ------------------------------*/
 
+/* ---------------------------
+        our client section start
+------------------------------*/
+
+.clients {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  padding: 36px 0;
+  border-top: 1px solid;
+  border-bottom: 2px solid;
+}
+
+/* ---------------------------
+        our client section end
+------------------------------*/
+
+/* ---------------------------
+        Popular collection start
+------------------------------*/
+
+.section-title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 70px;
+  color: var(--text-color);
+  text-align: center;
+}
+.collection-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.collection {
+  padding: 15px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+.collection img {
+  width: 100%;
+}
+.collection-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
+  color: var(--gray-color);
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+.price {
+  font-size: 24px;
+  line-height: 150%;
+  color: var(--dark-color);
+}
+.rating {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--gray-color2);
+}
+.rating i {
+  font-size: 16px;
+  color: var(--orange-color);
+}
+.collection-description {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--gray-color3);
+  letter-spacing: 0.018em;
+}
+.seemore {
+  float: right;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary-color);
+  border: 0;
+  background-color: unset;
+  margin-top: 50px;
+}
+.seemore i {
+  color: var(--primary-color);
+}
+/* ---------------------------
+        Popular collection end
+------------------------------*/
+
+/* ---------------------------
+        responsive area start
+------------------------------*/
+
 /* responsive area  */
 /* for mobile */
 
@@ -137,6 +238,9 @@ body {
   .header-container {
     padding-top: 35px;
     padding-bottom: 22px;
+  }
+  .menu.responsive {
+    display: block;
   }
   .cart-desktop,
   .menu {
@@ -152,6 +256,8 @@ body {
   .navbar,
   .menu ul {
     gap: 12px;
+    align-items: start;
+    flex-direction: column;
   }
   .logo {
     order: 1;
@@ -178,4 +284,25 @@ body {
   .hero-img {
     transform: scale(0.8);
   }
+  .btn-primary {
+    margin-top: 20px;
+  }
+
+  /* clients */
+  .clients {
+    flex-wrap: wrap;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    border: 0;
+    margin-bottom: 0;
+  }
+  /* collection container */
+  .collection-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
+/* ---------------------------
+        responsive area  end
+------------------------------*/
